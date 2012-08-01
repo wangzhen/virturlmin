@@ -1,0 +1,80 @@
+<%= form_for [:admin,  instance_variable_get("@#{controller_name.singularize}")], :url => path, :html => {:multipart => true ,:id => 'form'} do |form| %>
+
+
+  <div class="LeftNew">
+    <div class="Inner">
+      <%=render :partial => "/admin/shared/errors" ,:locals =>{:model => instance_variable_get("@#{controller_name.singularize}") }  %>
+      <div class="AcceNew">
+        <dl>
+          <dt><%=  controller_name.classify.constantize.human_attribute_name(:name) %></dt>
+          <dd><%= form.text_field :name ,:class => 'style1' %>
+          </dd>
+        </dl>
+        
+
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:content) %></dt>
+          <dd>
+  <%#= form.text_area   :content  %>
+            <%= form.cktext_area :content, :toolbar => 'Full' %>
+          </dd>
+        </dl>
+
+
+
+
+      </div>
+
+      <div class="PostBtn">
+        <p>
+          <%= form.submit t('labels.save')  , :class=>"btnW2_search" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<p style="clear:both">&nbsp;</p>
+<br />
+<br />
+<br />
+原码
+<br /><br />
+
+<%= form_for [:admin,  instance_variable_get("@#{controller_name.singularize}")], :url => path, :html => {:multipart => true ,:id => 'form'} do |form| %>
+
+
+  <div class="LeftNew">
+    <div class="Inner">
+      <%=render :partial => "/admin/shared/errors" ,:locals =>{:model => instance_variable_get("@#{controller_name.singularize}") }  %>
+      <div class="AcceNew">
+        <dl>
+          <dt><%=  controller_name.classify.constantize.human_attribute_name(:name) %></dt>
+          <dd><%= form.text_field :name ,:class => 'style1' %>
+          </dd>
+        </dl>
+
+ 
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:content) %></dt>
+          <dd>
+  <%= form.text_area   :content, :style => 'height:600px' %>
+          </dd>
+        </dl>
+
+
+
+      </div>
+
+      <div class="PostBtn">
+        <p>
+          <%= form.submit t('labels.save')  , :class=>"btnW2_search" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>

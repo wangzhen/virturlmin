@@ -1,0 +1,21 @@
+
+<!-- feed is cached -->
+
+<div id="home-welcome" style="padding-bottom: 14px; min-height: inherit;">
+  <div class="wrapper">
+    <p class="intro"><strong>Anthony's Blog</strong> 主要记录个的技术经验，与生活感想</p>
+  </div>
+</div>
+<div id="pagebody">
+  <div class="wrapper">
+    <%= render :partial => "/shared/left_banner" %>
+
+    <div class="col-10">
+      <% @blogs.each do |blog|  %>
+        <h3 class="head">[<%= blog.try(:category).try(:name) %>]&nbsp;&nbsp;<%= link_to  blog.title ,blog_path(blog) %></h3>
+      <% end %>
+    </div>
+
+      <%= paginate(@blogs ,:theme =>  'news') %>
+  </div>
+</div>

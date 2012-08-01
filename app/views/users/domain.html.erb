@@ -1,0 +1,52 @@
+<div class="BodyContents">
+
+  <div class="TitleArea">
+    <h2> 用户信息修改</h2>
+  </div>
+  <div class="TitleArea">
+  请填写正域名不要加   “／”　、  "http://"　或带有空格<br/>
+如:
+www.baidu.com
+baidu.com
+  </div>
+
+
+  <!--  <br class="clear" />-->
+  <div class="poststuff">
+ <%= form_for @user, :url => domain_users_path, :html => {:multipart => true ,:id => 'form'} do |form| %>
+
+
+  <div class="LeftNew">
+    <div class="Inner">
+    <%= render "error_messages", :target => @user %>
+      <div class="AcceNew">
+
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:domain) %></dt>
+          <dd>
+            <%= form.text_field   :domain , :class => 'style1' %>
+        </dl>
+       <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:domain2) %></dt>
+          <dd>
+            <%= form.text_field   :domain2 , :class => 'style1' %>
+        </dl>
+
+ 
+      </div>
+      <div class="PostBtn">
+        <p>
+          <%= form.submit t('labels.save')  , :class=>"btnW2_search" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+</div>
+</div>
+ 

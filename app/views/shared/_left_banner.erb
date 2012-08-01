@@ -1,0 +1,10 @@
+  <div id="sidebar" class="col-2">
+      <%  Category.root.each do |root| -%>
+      <h4 style=" border-bottom: 0px solid #DEDEDE;"><%= root.name %></h4>
+      <ul class="submenu" style=" border-top: 1px solid #DEDEDE;">
+        <% root.children.each do |children| %>
+          <li><a href="/blogs?category_id=<%= children.id %>"><%= children.name %></a></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>

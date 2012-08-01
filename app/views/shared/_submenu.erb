@@ -1,0 +1,96 @@
+<!--LEFT NAVI-->
+<div class="LeftNavi">
+
+  <div class="ListArea">
+    <p class="Category">管理菜单</p>
+    <ul>
+      <li class="Level1 <%= 'current' if controller_name == 'administrators' %>">
+        <a href='/users' class='l1'>用户信息</a>
+          <ul class="Level2">
+            <li class=" <%= (action_name=='edit'||action_name=='index')&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to '用户基本信息', users_path %>
+            </li>        
+               <li class="">
+              <%= link_to '域名修改', domain_users_path %>
+            </li>        
+                  <li class="">
+              <%= link_to '密码修改', password_users_path %>
+            </li>
+            </li>
+          </ul>
+      </li>
+    </ul>
+
+
+    <ul>
+      <li class="Level1">
+        <a href='/files' class='l1'>文件管理</a> 
+          <ul class="Level2">
+            <li class=" <%= (action_name=='edit'||action_name=='index')&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to '文件列表' ,  files_path %>
+            </li>
+            <li class="last <%= action_name=='new'&& controller_name=='news' ? 'on' :'' %>">
+            <%= link_to '文件列表' ,  files_path %>
+            </li>
+          </ul> 
+      </li>
+    </ul>
+
+<!--
+
+    <ul>
+      <li class="Level1 <%= 'current' if controller_name == 'administrators' %>">
+        <a href='/users' class='l1'>咨询</a>
+        <% if  ['administrators'].include?(controller_name) %>
+          <ul class="Level2">
+            <li class=" <%= (action_name=='edit'||action_name=='index')&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to t('labels.manager', :model => Administrator.model_name.human), admin_administrators_path %>
+            </li>
+            <li class="last <%= action_name=='new'&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to t('labels.add_manager', :model => Administrator.model_name.human), new_admin_administrator_path %>
+            </li>
+          </ul>
+        <% end %>
+      </li>
+    </ul>
+
+
+    <ul>
+      <li class="Level1 <%= 'current' if controller_name == 'administrators' %>">
+        <a href='/users' class='l1'>备份文件</a>
+        <% if  ['administrators'].include?(controller_name) %>
+          <ul class="Level2">
+            <li class=" <%= (action_name=='edit'||action_name=='index')&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to t('labels.manager', :model => Administrator.model_name.human), admin_administrators_path %>
+            </li>
+            <li class="last <%= action_name=='new'&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to t('labels.add_manager', :model => Administrator.model_name.human), new_admin_administrator_path %>
+            </li>
+          </ul>
+        <% end %>
+      </li>
+    </ul>
+
+
+
+
+    <ul>
+      <li class="Level1 <%= 'current' if controller_name == 'administrators' %>">
+        <a href='/users' class='l1'>备份数据库存</a>
+        <% if  ['administrators'].include?(controller_name) %>
+          <ul class="Level2">
+            <li class=" <%= (action_name=='edit'||action_name=='index')&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to t('labels.manager', :model => Administrator.model_name.human), admin_administrators_path %>
+            </li>
+            <li class="last <%= action_name=='new'&& controller_name=='news' ? 'on' :'' %>">
+              <%= link_to t('labels.add_manager', :model => Administrator.model_name.human), new_admin_administrator_path %>
+            </li>
+          </ul>
+        <% end %>
+      </li>
+    </ul>
+
+-->
+
+  </div>
+</div>

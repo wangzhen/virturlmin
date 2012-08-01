@@ -1,0 +1,237 @@
+zh:
+  labels:
+    id: ID
+    delete_select: 选中批量删除
+    pref: 都道府県
+    city: 市
+    district: 区
+    submit: 提交
+    create: 新建
+    new: "添加"
+    save: 保存
+    edit: 编辑
+    delete: 删除
+    search: 搜索
+    cancel: 取消
+    back: 返回
+    export: 导出
+    test: 测试
+    sends: 发送
+    test_sends: 测试发送
+    operation: 操作
+    operate: 操作
+    select: 请选择
+    copy: 复制
+    keyword: 关键字
+    update: 更新
+    detail: "详细"
+    created_at: "创建时间"
+    show: "显示"
+    updated_at: "修改时间"
+    limit_words: "%{count}个文字以内"
+    only_integer: "只能为数字"
+    image_info: "最佳宽为%{width},高为%{height}"
+    manager: "%{model}管理"
+    add_manager: "添加%{model}"
+    new_manager: "添加%{model}"
+    create_manager: "添加%{model}"
+    edit_manager: "修改%{model}"
+    update_manager: "修改%{model}"
+    show_manager: "显示%{model}"
+    info: "%{model}信息"
+    public: '发布'
+    public: '发布'
+    submit: 提交
+    create: 新建
+    save: 保存
+    edit: 编辑
+    copy: 复制
+    delete: 删除
+    search: 搜索
+    cancel: 取消
+    back: 返回
+    export: 导出
+    test: 测试
+    sends: 发送
+    test_sends: 测试发送
+    operation: 操作
+    select: 请选择
+    male: 男
+    female: 女
+    admin_home: 后台管理
+    admin_welcome: 欢迎登陆后台管理系统
+    back_home: 返回首页
+    price: 费用
+    contract_sms_or_email_count: 可发送短信/邮件数
+    sms_or_email_count: 已发送短信/邮件数
+    sms_or_email_leave_count: 剩余短信/邮件数
+    monetary_unit: 元
+    no_contract: 本月无合同
+    bingti: 并替
+    column_manager: 管理字段名称
+    import_text: 文本导入
+    import_text_example: 文本每行格式
+    alert_wait_message: 提交后请耐心等候
+    closed: 关闭
+    insert: 插入
+    insert_email: 插入邮件
+    insert_name: 插入名称
+    insert_telephone: 插入电话号码
+    test_mail_message: 正在发送，请耐心等待.......
+    save_wait_message: 正在保存数据，请耐心等待.....
+    save_all_search: 保存全部搜索结果
+    delete_all_search: 取消全部搜索结果
+    telephone_type: 电话类型
+    message_count: 信息条数
+    resend: 重新发送
+    account_closed: 账户已关闭或合同到期
+    contact_message: 如果疑问联系
+    login_name: 用户名
+    login_password: 密码
+    remember_me: 记住登录信息
+    login: 登录
+    default_info: 基本信息
+    history_month: 月份
+    sent_message_num: 已发送信息数
+    lave_message_num: 剩余信息数
+    month_default_num: 每月基本条数
+    select_all: 全选
+    delete_select: 删除选中的
+    message: 发送内容
+    yidong: 移动
+    liantong: 联通
+    dianxing: 电信
+    updated: 已更新
+    created_success: 创建成功
+    created_failed: 创建失败
+    update_success: 更新成功
+    update_failed: 更新失败
+    delete_success: 删除成功
+    delete_failed: 删除失败
+    test_success: 测试通过
+    test_failed: 测试失败
+    validate_success: 验证通过
+    validate_failed: 验证失败
+    save_success: 保存成功
+    save_failed: 保存失败
+    socket_error_message: 网络故障，请稍后重试
+    column_add_success: 条记录成功添加
+    file_not_exist: 请检查上传文件，文件读取出错
+    account_not_exist: 账户不存在,请联系管理员
+    config_failed: 配置错误
+    begin_sent: 开始发送
+    send_success: 发送成功
+    send_failed: 发送失败
+    add_success: 添加成功
+    login_again: 重新登录
+    deleted: 已删除，或信息不存在
+    user_login: 用户登录
+    login_success: 登录成功
+    logout: 退出
+    logout_success: 退出成功
+    name_or_password_error: 用户名或密码出错
+    cont_destory: 有合同不能删除
+    company_summary: 公司信息一览
+    sms_company_size: SMS公司总数
+    email_company_size: EMAIL公司总数
+    all_company_size: 公司总数
+    all_company_size: 公司总数
+    select_save_iconv: 请选择文件的字符编码
+    detail: 详情一览
+    operate: 操作
+    look: 查看
+    download: 下载
+    upload: 上传
+    send_object: 删除发送对象
+    no_send_object: 添加发送对象
+    send_info: "共发送%{sum} 封邮件，%{success_counter}封成功，%{failure_counter}封失败"
+    send_info_sms:   "共发送%{sum} 条短信，%{success_counter}封成功，%{failure_counter}封失败"
+    import_csv: 导入CSV数据
+    sms_import_example: 文件格式说明：SMS发送对象上传文件必须是CSV文档，若是excel请转化为CSV格式再上传， 每条数据分为五部分，部分与部分之部用半角逗号（,）隔开，请把手机号码放到第一部分，其它信息自己定义如下例子：
+    only_sms_import_example: 文件格式说明：SMS发送对象上传文件必须是CSV文档，若是excel请转化为CSV格式再上传， 请把手机号码放到第一列,每行仅有一个电话号码，如下例子：
+    email_import_example: 文件格式说明：邮件发送对象上传文件必须是CSV文档，若是excel请转化为CSV格式再上传， 每条数据分为五部分，部分与部分之部用半角逗号（,）隔开，请把邮件号码放到第一部分，其它信息自己定义如下例子：
+    only_email_import_example: 文件格式说明：邮件发送对象上传文件必须是CSV文档，若是excel请转化为CSV格式再上传， 请把邮件号码放到第一列单元格，每行仅有一个电话号码，如下例子：
+    sms_example:  注：移动每条短信保持在60文字以内;超过则按60倍数计算：如121个文字按三条短信计算<br/><br/>联通每条短信保持在60文字以内,超过则按70倍数计算：如141个文字按三条短信计算。<br/><br/>电信每条短信保持在60文字以内
+    download_example: CSV例子下载
+    send_sucessful: 发送成功
+    send_failur: 发送失败
+    no_send: 未发送
+    keyword: 关键字
+    email_error: 请输入正确EMAIL格式
+    have_actived: 您的注册码过期或已被激活！
+    actived: 激活成功请登陆！
+  confirmation:
+    delete: "确定要删除该记录？"
+  number:
+    format:
+      separator: "."
+      delimiter: ","
+      precision: 3
+    currency:
+      format:
+        format: "%u %n"
+        unit: "¥"
+        separator: "."
+        delimiter: ","
+        precision: 2
+  views:
+    pagination:
+      first: "&laquo; 第一页"
+      last: "最后一页 &raquo;"
+      previous: "&lsaquo; 上一页"
+      next: "下一页 &rsaquo;"
+      truncate: "..."
+  ckeditor:
+    page_title: "CKEditor Files Manager"
+    confirm_delete: "Delete file?"
+    buttons:
+      cancel: "Cancel"
+      upload: "Upload"
+      delete: "Delete"
+
+  datetime:
+    distance_in_words:
+      # Satzbau: "Vor einer halben Minute"
+      half_a_minute: '1分钟以内'
+      less_than_x_seconds:
+        zero: '刚刚'
+        one: '刚刚'
+        other: '%{count} 以前'
+      x_seconds:
+        one: '刚刚'
+        other: '%{count}秒以前'
+      less_than_x_minutes:
+        zero: '少于1分钟'
+        one: '1分钟左右'
+        other: ' %{count}分钟以前'
+      x_minutes:
+        one: '1分钟以内'
+        other: '%{count} 分钟以前'
+      about_x_hours:
+        one: '1小时以内'
+        other: '%{count}小时以前'
+      x_days:
+        one: '一天以内'
+        other: '%{count}天以前'
+      about_x_months:
+        one: '上个月'
+        other: ' %{count}月以前'
+      x_months:
+        one: '1个月以内'
+        other: '%{count}月以前'
+      about_x_years:
+        one: '去年'
+        other: '%{count}年以前'
+      over_x_years:
+        one: '大于一年'
+        other: '%{count}年以前'
+      almost_x_years:
+        one: '接近一年'
+        other: ' %{count}年以前'
+  date:
+    order: order
+  simple_captcha:
+    message:
+      default: "Secret Code did not match with the Image"
+      user: "The secret Image and code were different"
+      present: '请输入正确的验证码！'

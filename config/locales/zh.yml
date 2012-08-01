@@ -1,0 +1,98 @@
+zh:
+#每个项目必用的，不是每个项目必用的请写下面
+#every project must 
+  labels:
+    pref: 都道府県
+    city: 市
+    district: 区
+    submit: 提交
+    create: 新建
+    new: "添加"
+    save: 保存
+    edit: 编辑
+    delete: 删除
+    search: 搜索
+    cancel: 取消
+    back: 返回
+    export: 导出
+    test: 测试
+    sends: 发送
+    test_sends: 测试发送
+    operation: 操作
+    operate: 操作
+    select: 请选择
+    copy: 复制
+    keyword: 关键字
+    update: 更新
+    detail: "详细"
+    created_at: "创建时间"
+    show: "显示"
+    updated_at: "修改时间"
+    limit_words: "{{count}}个文字以内"
+    only_integer: "只能为数字"
+    image_info: "最佳宽为{{width}},最佳高为{{height}}"
+  select:
+    per_page_select_50: 每页50条
+    per_page_select_100: 每页100条
+    per_page_select_200: 每页200条
+    per_page_select_500: 每页500条
+    default_iconv: 默认编码
+    default_select: 请选择
+  
+  flash:
+    saved: "保存成功"
+    saved_failed: "无法保存数据，请检查所填写的内容是否正确"
+    deleted: "记录删除成功"
+    delete_failed: "无法删除记录"
+    logged_in: "你已将登录成功"
+    login_failed: "登录失败，请检查用户名和密码是否输入正确"
+    logged_out: "你已经退出"
+
+    
+  
+  confirmation:
+    delete: "确定要删除该记录？"
+    
+  number:
+    format:
+      separator: "."
+      delimiter: ","
+      precision: 3
+    currency:
+      format:
+        format: "%u %n"
+        unit: "¥"
+        separator: "."
+        delimiter: ","
+        precision: 2
+  
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b%d日"
+      long: "%Y年%b%d日"
+    day_names: [星期日, 星期一, 星期二, 星期三, 星期四, 星期五, 星期六]
+    abbr_day_names: [日, 一, 二, 三, 四, 五, 六]
+    month_names: [~, 一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+    abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    order: [ :year, :month, :day ]
+
+  time:
+    formats:
+      default: "%Y年%b%d日 %A %H:%M:%S"
+      short: "%b%d日 %H:%M"
+      long: "%Y年%b%d日 %H:%M:%S"
+    am: "上午"
+    pm: "下午"
+
+  views:
+    pagination:
+      previous: " 上一页"
+      next: "下一页 "
+      truncate: "..."
+      first: 第一页
+      last: 最后一页
+
+#每个项目不同标签
+#every project is different
+

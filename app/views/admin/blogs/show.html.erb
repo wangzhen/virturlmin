@@ -1,0 +1,38 @@
+<p>
+  <b>District:</b>
+  <%=h @blog.district_id %>
+</p>
+
+<p>
+  <b>Room name:</b>
+  <%=h @blog.room_name %>
+</p>
+
+<p>
+  <b>Room no:</b>
+  <%=h @blog.room_no %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @blog.name %>
+</p>
+
+<p>
+  <b>Tel:</b>
+  <%=h @blog.tel %>
+</p>
+
+<p>
+  <b>Mail:</b>
+  <%=h @blog.mail %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @blog.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>

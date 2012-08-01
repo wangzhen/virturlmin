@@ -1,0 +1,95 @@
+<%= form_for [:admin, @yuexing], :url => path, :html => {:multipart => true ,:id => 'form'} do |form| %>
+
+
+  <div class="LeftNew">
+    <div class="Inner">
+      <%=render :partial => "/admin/shared/errors" ,:locals =>{:model => instance_variable_get("@#{controller_name.singularize}") }  %>
+      <div class="AcceNew">
+        <dl>
+          <dt><%=  Yuexing.human_attribute_name(:name) %></dt>
+          <dd><%= form.text_field :name ,:class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= News.human_attribute_name(:image) %></dt>
+          <dd>
+            <%= form.file_field   :image  %> <%= t('labels.image_info'  , :width => '952px' ,:height => '320px') %>
+          </dd>
+        </dl>
+        访问记录
+        <hr/>
+        <div id="xingkeyword">
+          <%= form.fields_for :xingkeywords do |builder| -%>
+            <dl>
+              <dt><%= Xingkeyword.human_attribute_name(:name) %></dt>
+              <dd><%= builder.text_field :name ,:class => 'style1' %></dd>
+            </dl>
+            <dl>
+              <dt><%= Xingkeyword.human_attribute_name(:q) %></dt>
+              <dd><%= builder.text_field :q ,:class => 'style1' %></dd>
+            </dl>
+            <dl>
+              <dt><%= Xingkeyword.human_attribute_name(:a) %></dt>
+              <dd><%= builder.text_field :a ,:class => 'style1' %></dd>
+            </dl>
+            <dl>
+              <dt><%= Discography.human_attribute_name(:image) %></dt>
+              <dd><%= builder.file_field   :image   %> <%= t('labels.image_info'  , :width => '322px' ,:height => '320px') %>
+                <%= image_tag builder.object.image.try(:url) ,:width => "200px" if builder.object.image_file_name %>
+              </dd>
+            </dl>
+          <% end -%>
+        </div>
+        <dl>
+          <dt></dt>
+          <dd>
+            <%= link_to "访问记录追加" , add_xingkeyword_admin_yuexings_path  , :remote => true ,:method => :post  %>
+          </dd>
+        </dl>
+
+        <br />
+        唱片：
+        <hr/>
+        <div id="discography">
+          <%= form.fields_for :discographies do |builder| -%>
+            <dl>
+              <dt><%= Discography.human_attribute_name(:name) %></dt>
+              <dd><%= builder.text_field :name ,:class => 'style1' %></dd>
+            </dl>
+            <dl>
+              <dt><%= Discography.human_attribute_name(:title) %></dt>
+              <dd><%= builder.text_field :title ,:class => 'style1' %></dd>
+            </dl>
+            <dl>
+              <dt><%= Discography.human_attribute_name(:summary) %></dt>
+              <dd><%= builder.text_field :summary ,:class => 'style1' %></dd>
+            </dl>
+            <dl>
+              <dt><%= Discography.human_attribute_name(:content) %></dt>
+              <dd><%= builder.text_field :content ,:class => 'style1' %></dd>
+            </dl>
+            <dl>
+              <dt><%= Discography.human_attribute_name(:image) %></dt>
+              <dd><%= builder.file_field   :image   %><%= t('labels.image_info'  , :width => '93px' ,:height => '93px') %>
+                <%= image_tag builder.object.image.try(:url) ,:width => "200px" if builder.object.image_file_name %>
+              </dd>
+            </dl>
+          <% end -%>
+        </div>
+        <dl>
+          <dt></dt>
+          <dd>
+            <%= link_to "唱片追加" , add_discography_admin_yuexings_path  , :remote => true ,:method => :post  %>
+          </dd>
+        </dl>
+      </div>
+      <div class="PostBtn">
+        <p>
+          <%= form.submit t('labels.save')  , :class=>"btnW2_search" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>

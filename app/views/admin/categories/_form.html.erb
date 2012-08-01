@@ -1,0 +1,32 @@
+<%= form_for [:admin, instance_variable_get("@#{controller_name.singularize}")], :url => path, :html => {:multipart => true ,:id => 'form'} do |form| %>
+  <div class="LeftNew">
+    <div class="Inner">
+      <%=render :partial => "/admin/shared/errors" ,:locals =>{:model => instance_variable_get("@#{controller_name.singularize}") }  %>
+      <div class="AcceNew">
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:name) %></dt>
+          <dd>
+            <%= form.text_field   :name , :class => 'style1' %>
+          </dd>
+        </dl>
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:parent_id) %></dt>
+          <dd>
+         <%= form.select  :parent_id ,[['','']]+Category.all.collect{|c|[c.name , c.id]} %>
+          </dd>
+        </dl>
+
+
+      </div>
+      <div class="PostBtn">
+        <p>
+          <%= form.submit t('labels.save')  , :class=>"btnW2_search" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,370 @@
+ja:
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "エラーが発生しました。「{{model}}」は保存されませんでした。"
+          other: " {{count}} 個のエラーが発生しました。「{{model}}」保存されませんでした。"
+        body: "エラーメッセージを確認してください："
+      messages:
+        inclusion:  ": リストに含まれていません"
+        exclusion:  ": 有効な値ではありません"
+        invalid:  ": 妥当な値ではありません"
+        confirmation:  ": 確認できません"
+        accepted:   ": 入力できません"
+        empty:  ": 何も入力されていません"
+        blank:  ": 空白です"
+        too_long:  ": {{count}}文字以下で入力してください"
+        too_short:  ": ({{count}}文字以上で入力してください)"
+        wrong_length:  ": 桁数が合っていません({{count}}桁必要です)"
+        taken:  ": 有効ではありません"
+        not_a_number:  ": 数字ではありません"
+        greater_than:  ": {{count}}文字を超えて入力されています"
+        greater_than_or_equal_to:  ": {{count}}文字以上入力されています"
+        equal_to:  ": {{count}}と同値です"
+        less_than:  ": {{count}}文字未満です"
+        less_than_or_equal_to:  ": {{count}}文字以下で入力されています"
+        odd:  ": 端数が入力されています"
+        even:  ": 偶数が入力されています"
+        invalid_address: "登録されていないアドレスです"
+        invalid_format: "フォーマットが違います"
+
+    models:
+      hotel: 宿泊施設
+      plan: 宿泊プラン
+      administrator: 管理員
+      area: 地域
+      hotel_news: 宿泊施設記事
+      station: バス停
+      stations_picture: バス停写真
+      contact_price: 宿泊プランお問い合わせ
+      contact: お問い合わせ
+      travel_plan: モデルコース
+      travel_plan_detail: モデルコース詳細
+      travel_plan_price: モデルコース価格
+      travel_plan_detail_activity: モデルコース詳細
+      shopping_happy: 楽しむ秘訣
+      shopping_comment: コメント
+
+    attributes:
+      area:
+        name: 名前
+        file: ロゴファイル
+        content: 説明
+      hotel:
+        id: "ID"
+        name: 名称
+        key_phrase: キーワード
+        area_id: 地域
+        summary: サマリ
+        other_summary: その他のサマリ
+        content: 説明
+        map_no: 地図番号
+        postcode: 郵便番号
+        pref_id: 都道府県
+        city_id: 市
+        district_id: 区
+        address: 住所
+        access: アクセス
+        checkin: チェックイン
+        checkout: チェックアウト
+        moning_start_time: 朝食開始時間
+        moning_end_time: 朝食終了時間
+        dinner_start_time: 夕食開始時間
+        dinner_end_time: 夕食終了時間
+        bath_summary: 温泉の説明
+        food_summary: 食事の説明
+        food1_title: 食事時間1タイトル
+        food1_summary: 食事時間1内容
+        food2_title: 食事時間2タイトル
+        food2_summary: 食事時間2内容
+        othe2_summary: その他説明
+        transport_fee: 交通費
+        lat: 緯度
+        lng: 経度
+        bath1_title: 温泉1タイトル
+        bath1_summary: 温泉1説明
+        bath2_title: 温泉2タイトル
+        bath2_summary: 温泉2説明
+        bath3_title: 温泉3タイトル
+        bath3_summary: 温泉3説明
+        bath4_title: 温泉4タイトル
+        bath4_summary: 温泉4説明
+        bathimage: 温泉の写真
+        room_summary: 部屋の特徴
+        short_summary: 短い説明
+        updated_at: 更新時間
+        created_at: 作成時間
+        icon: アイコン
+        room_num: 部屋数
+        telphone: 電話
+        fax: FAX
+        sort: 並び替え用数値
+      news:
+        id: "ID"
+        area_id: 地域
+        title : タイトル
+        content: 内容
+        public_date: 公開時間
+        is_public: 公開フラグ
+        summary: 短い説明
+        image: 写真
+      featured_news:
+        id: "ID"
+        area_id: 地域
+        title : タイトル
+        content: 内容
+        public_date: 公開時間
+        is_public: 公開フラグ
+        summary: 短い説明
+        created_at: 作成時間
+        image: 写真
+      food:
+        id: "ID"
+        area_id: 地域
+        map_no: 地図番号　
+        restaurant_icons_id: アイコン
+        title: タイトル　
+        summary: 短い説明
+        pref_id: 都道府県
+        city_id: 市
+        district_id: 区
+        address: 住所
+        lat: 緯度
+        lng: 経度
+        opening_hours: 営業時間
+        menu: メニュー
+        other: その他
+        food_icons: 食事処写真
+        access: アクセス
+        sort: 並び替え
+        image: 写真1
+        image1: 写真1
+        image2: 写真2
+        image3: 写真3
+        public_date: 公開時間
+        is_public: 公開フラグ
+        foodicon_id: アイコン
+        created_at: 作成時間
+      shopping:
+        id: "ID"
+        area_id: 地域
+        map_no: 地図番号
+        title: タイトル
+        summary: 短い説明
+        pref_id: 都道府県
+        city_id: 市
+        district_id: 区
+        address: 住所
+        lat: 緯度
+        lng: 経度
+        opening_hours: 営業時間
+        need_time: 所要時間
+        other: その他
+        public_date: 公開時間
+        is_public: 公開フラグ
+        image: 写真1
+        image2: 写真2
+        image3: 写真3
+        embark_time: 乗車時間
+        access: アクセス
+        dispatching: 出発時間
+        remarks: 備考
+        booking_method: 購入方法
+      travel_plan:
+        id: "ID"
+        area_id: 地域
+        title: タイトル
+        price: 価格
+        destription: 説明
+        start_date: 出発日時
+        remarks: 備考
+        summary: 短い説明
+        content: 内容
+        image: 写真
+        public_datetime: 公開時間
+        is_public: 公開フラグ
+      travel_plan_price:
+        id: "ID"
+        title: タイトル
+        price: 価格
+        remarks: 備考
+        sort: 並び替え
+      travel_plan_detail:
+        id: "ID"
+        area_id: 地域
+        title: タイトル
+        summary: 短い説明
+        content: 説明
+        image: 写真
+        sort: 並び替え
+        public_datetime: "公開時間"
+        is_public: "公開フラグ"
+      travel_plan_detail_activity:
+        id: "ID"
+        area_id: "地区"
+        title: タイトル
+        summary: 短い説明
+        content: 説明
+        image: 写真
+        sort: 並び替え
+        public_datetime: "公開時間"
+        is_public: "公開フラグ"
+        time: 時間
+      traffic:
+        id: "ID"
+        area_id: "地区"
+        railway: "電車"
+        start_station: "出発駅"
+        trolleybus: "バス"
+        ways: "行き方"
+        time: "時間"
+        stop_station: "目的駅"
+      plan:
+        id: "ID"
+        plan_no: "宿泊プラン番号"
+        name: "名称"
+        hotel_id: "宿泊施設"
+        price_1person: "1人の料金"
+        price_2person: "2人の料金"
+        price_3person: "3人の料金"
+        price_4person: "4人の料金"
+        price_table_id: "料金表"
+        summary: 短い説明
+        food1_title: "主食1タイトル"
+        food1_summary: "主食1短い説明"
+        food2_title: "主食2タイトル"
+        food2_summary: "主食2短い説明"
+        food_contents: "主食说明"
+        checkin: "入住"
+        checkout: "退房"
+        image: 写真
+        updated_at: "更新时间"
+        created_at: 作成時間
+      administrator:
+        id: "ID"
+        name: 名前
+        salted_password: パスワード
+        salt: パスワード
+        password: パスワード
+        password_confirmation: パスワード確認
+
+      area:
+        id: "ID"
+        name: 地域名
+        content: 説明
+        hotels_count: 宿泊施設数
+        shoppings_count: 観光/買物数
+        news_count: 記事数
+        featured_news: 特集数
+        travel_plans_count: モデルコース数
+        traffics_count: アクセス数
+        foods_count: 食事処数
+        created_at: 作成時間
+
+      price:
+        id: "ID"
+        name: "名称"
+        price_no: プランID
+        price_1person: "1人価格"
+        price_2person: "2人価格"
+        price_3person: "3人価格"
+        price_4person: "4人価格"
+        plan_id: 宿泊プラン
+        image: 写真
+        price_icon: アイコン
+        created_at: 作成時間
+        price_number: プランNo
+        price_table_memo: 備考
+
+      hotel_picture:
+       id: "ID"
+       name: "名称"
+       image: 写真
+       priority: 優先度
+       room_picture_category_id: 写真分類
+       summary: 短い説明
+       content: 説明
+       created_at: 作成時間
+      shopping_happy:
+       id: "ID"
+       title: タイトル
+       summary: 短い説明
+       content: 説明
+       image: 写真
+      shopping_comment:
+       id: "ID"
+       title: タイトル
+       summary: 短い説明
+       content: 説明
+       image: 写真
+      hotel_news:
+       id: "ID"
+       title: タイトル
+       summary: 短い説明
+       content: 説明
+       image: 写真
+       created_at: 作成時間
+      station:
+       area_id: 地域
+       title: タイトル
+       summary: 短い説明
+      stations_picture:
+        image: 写真
+        image_destription: 写真説明
+        sort: 並び替え
+      contact:
+        hotel_id: 宿泊施設
+        traffic_fee: 交通費
+        contact_type: 問い合わせ分類
+        name: 名称
+        pinyin: 拼音
+        adress: 住所
+        tel: 電話
+        email: メール
+        visa_status: ビザ取得状況
+        airplane_plan: 航空券手配状況
+        visa_company: ビザ取得会社
+        credit_card_type: クレジットカード
+        credit_card_id: クレジットカード
+        credit_security_number: クレジットカード番号
+        credit_card_name: クレジットカード会社
+        credit_card_past_due_year: 有効期限(年)
+        credit_card_past_due_month: 有効期限(月)
+        conent: 問い合わせ内容
+      contact_price:
+        contact_id: 問い合わせ
+        price_id: 価格
+        usedate: 日時
+        timelimit: チェックアウト日時
+        room_count: 部屋数
+        men_count: 大人数
+        children_count: 子供人数
+        baby_count: 赤子人数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

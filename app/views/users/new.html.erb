@@ -1,0 +1,54 @@
+ 
+<!-- feed is cached -->
+ <div class="BodyContents">
+  <div class="TitleArea">
+    <h2>用户信息修改</h2>
+  </div>
+  <!--  <br class="clear" />-->
+  <div class="poststuff">
+<%= form_for @user, :url => users_path, :html => {:multipart => true ,:id => 'form'} do |form| %>
+  <div class="LeftNew">
+    <div class="Inner">
+  <%= render "error_messages", :target => @user %>
+  <br/>
+      <div class="AcceNew">
+        <dl>
+          <dt><%= User.human_attribute_name(:domain) %>(格式必须正确,如果没有可先写一个测试的随后改)</dt>
+          <dd>
+            <%= form.text_field   :domain , :class => 'style1' %>
+
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= User.human_attribute_name(:name) %> (必须是５个以的字母组合)</dt>
+          <dd>
+            <%= form.text_field   :name , :class => 'style1' %>
+ 
+          </dd>
+        </dl>
+        <dl>
+          <dt><%= User.human_attribute_name(:password) %></dt>
+          <dd>
+            <%= form.text_field   :password , :class => 'style1' %>
+          </dd>
+        </dl>
+        <dl>
+          <dt><%= User.human_attribute_name(:password_confirmation) %></dt>
+          <dd>
+            <%= form.text_field   :password_confirmation , :class => 'style1' %>
+          </dd>
+        </dl>
+
+      </div>
+      <div class="PostBtn">
+        <p>
+          <%= form.submit '保存' , :class=>"btn2" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>
+  </div>
+</div>

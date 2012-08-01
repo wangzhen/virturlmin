@@ -1,0 +1,67 @@
+
+<div class="BodyContents">
+  <div class="TitleArea">
+    <h2><%= t('labels.manager', :model => controller_name.classify.constantize.model_name.human) %></h2>
+
+    <p class="btnW5"><%= link_to t('labels.add_manager', :model => ''), eval("new_admin_#{controller_name.singularize}_path") %></p>
+  </div>
+  <%= render :partial => "/admin/shared/notice" %>
+
+  <%= render :partial => "search" %>
+
+  <!--OPERATION-->
+  <%= render :partial => "/admin/shared/paginate", :locals => {:objects => instance_variable_get("@#{controller_name}")} %>
+
+  <!--LIST-->
+  <div class="ListContents">
+    <table cellspacing="0" cellpadding="0" border="0" class="widefat">
+      <tbody>
+
+      <tr>
+        <th class="lineB " scope="col">
+          <%= sort_link @search ,  :id, :text => controller_name.classify.constantize.human_attribute_name("id") %>
+        </th>
+        <th class="lineB " scope="col">
+          <%= sort_link @search ,  :title, :text => controller_name.classify.constantize.human_attribute_name("title") %>
+        </th>
+        <th class="lineB " scope="col">
+          <%= sort_link @search ,  :title, :text => controller_name.classify.constantize.human_attribute_name("created_at") %>
+        </th>
+        <th class="lineB operation-column" scope="col">操作</th>
+      </tr>
+      <% instance_variable_get("@#{controller_name}").each do |obj| %>
+          <%- cycle_class = cycle('Blue', '') %>
+          <tr>
+            <td class="<%= cycle_class %>"><%= obj.id %></td>
+            <td class="<%= cycle_class %>"><%= obj.title %></td>
+            <td class="<%= cycle_class %>"><%= parse_date obj.created_at %></td>
+            <td class="<%= cycle_class %>">
+              <%#= link_to '主题管理', admin_subjects_path(:jpop_id => jpop.id) %>
+              <%#= link_to '商店管理', admin_shops_path(:jpop_id => jpop.id) %>
+              <%= link_to t('labels.edit'), eval("admin_#{controller_name.singularize}_path(obj)")  %><br/>
+              <%= link_to t('labels.delete'),  eval("admin_#{controller_name.singularize}_path(obj)")  ,:method => :delete ,:confirm  => t('confirmation.delete')%><br/>
+              <br/>
+            </td>
+          </tr>
+      <% end %>
+      <tr>
+        <th class="lineB " scope="col">
+          <%= sort_link @search ,  :id, :text => controller_name.classify.constantize.human_attribute_name("id") %>
+        </th>
+        <th class="lineB " scope="col">
+          <%= sort_link @search ,  :title, :text => controller_name.classify.constantize.human_attribute_name("title") %>
+        </th>
+        <th class="lineB " scope="col">
+          <%= sort_link @search ,  :title, :text => controller_name.classify.constantize.human_attribute_name("created_at") %>
+        </th>
+
+        <th class="lineB operation-column" scope="col">操作</th>
+      </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+  <%= render :partial => "/admin/shared/paginate", :locals => {:objects => instance_variable_get("@#{controller_name}")} %>
+</div>
+

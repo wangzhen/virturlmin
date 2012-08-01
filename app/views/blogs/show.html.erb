@@ -1,0 +1,118 @@
+
+<!-- feed is cached -->
+<div id="headline">
+  <div class="wrapper">
+    <h2><a href="/blogs" title="WordPress News" rel="home">Blog</a> =>
+      <%= link_to  @blog.category.name , blog_path(:category_id => @blog.category_id) %></h2>
+  </div>
+</div>
+<div id="pagebody">
+  <div class="wrapper">
+
+    <div class="col-14">
+
+      <h1 class="copse head" style="font-size: 35px;font-weight: bold;text-align: center"><%= @blog.title %></h1>
+      <div class="bubble" >
+
+        <div id="issuecomment-1401778" class="comment normal-comment">
+          <!--
+           <div class="cmeta">
+             <p class="author">
+               <span class="icon"></span>
+               <strong class="author">分类：<a href="/blogs?category_id?<%= @blog.category_id %>"><%= @blog.category.name %></a></strong>
+             </p>
+             <p class="info">
+               <em class="date"><a href="#issuecomment-1401778"><%=  @blog.created_at.strftime("%Y-%m-%d %X") %></a></em>
+             </p>
+           </div>
+          -->
+
+          <div class="body">
+            <div class="formatted-content">
+              <div class="content-body markdown-body markdown-format">
+                <p><%= @blog.content.html_safe %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <style type="text/css">
+        .bubble {
+          padding: 3px;
+          background: #EEE;
+          border-radius: 3px;
+          font: 13px helvetica,arial,freesans,clean,sans-serif;
+          line-height: 1.4;
+          color: #333;
+        }
+
+        .comment {
+          margin: 0;
+          padding: 0;
+          border: 1px solid #CACACA;
+        }
+        .cmeta {
+          height: 33px;
+          padding: 0 10px;
+          border-bottom: 1px solid #CCC;
+          background: url('/images/metabar.gif')  0  -33px repeat-x;
+        }
+
+        .comment > .body {
+          position: relative;
+          padding: 0;
+          color: #333;
+          font-size: 12px;
+          background: #FBFBFB;
+        }
+        .comment .content-body {
+          padding: 10px;
+          font-size: 13px;
+        }
+        .comment .cmeta p.author {
+          margin: 0;
+          float: left;
+          max-width: 600px;
+          font-size: 12px;
+          height: 33px;
+          line-height: 33px;
+          text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .comment .cmeta p.info {
+          float: right;
+          margin: 0;
+          font-size: 11px;
+          height: 33px;
+          line-height: 33px;
+        }
+
+        .comment .content-body {
+          padding: 10px;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+
+      </style>
+
+
+      <p style="clear:both">&nbsp; </p>
+    </div>
+
+  </div>
+
+  <p style="clear:both">&nbsp; </p>
+</div>
+<div class="wrapper">
+  <%  Category.root.each do |root| -%>
+    <p> <%= root.name %>:
+    <% root.children.each do |children| %>
+      <a href="/blogs?category_id=<%= children.id %>"><%= children.name %></a>
+    <% end %>
+  </p>
+<% end %>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title><%= @title || "admin" %></title>
+    <%= stylesheet_link_tag 'admin'  %>
+
+    <%= stylesheet_link_tag 'member' %>
+  <%= csrf_meta_tags %>
+<%#= javascript_include_tag :fckeditor %>
+<%#= calendar_date_select_includes %>
+<%#= javascript_include_tag :defaults %>
+<%#= javascript_include_tag :ckeditor %>
+    <%= javascript_include_tag "/assets/ckeditor/ckeditor.js" %>
+<%#= javascript_include_tag "/javascripts/ckeditor/config.js" %>
+<%#= javascript_include_tag "/javascripts/ckeditor/ckeditor_basic.js" %>
+<%#= stylesheet_link_tag '/javascripts/ckeditor/contents.css'  %>
+    <%= yield :head %>
+  </head>
+  <body>
+    <div class="Header">
+      <div class="LogoArea">
+        <p class="logo">
+          <a href="/" target="_blank" class="copse"> Blog管理</a>
+        </p>
+        <span class="welcome"><%= t("labels.admin_welcome") %></span>
+      </div>
+      <ul class="Button">
+        <li><a href="/admin/sessions/home" target="_blank"><%= t("labels.back_home") %></a></li>
+        <li><%= link_to '退出登录', :controller=>'admin/sessions', :action=>'logout' %></li>
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="Wrapper">
+
+      <%= render :partial => "/admin/shared/submenu" %>
+
+      <%= yield  %>
+
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

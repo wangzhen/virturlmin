@@ -1,0 +1,70 @@
+<div class="BodyContents">
+  <div class="TitleArea">
+    <h2> 用户信息修改</h2>
+  </div>
+  <!--  <br class="clear" />-->
+  <div class="poststuff">
+ <%= form_for @user, :url => user_path(@user), :html => {:multipart => true ,:id => 'form'} do |form| %>
+  <div class="LeftNew">
+    <div class="Inner">
+
+      <div class="AcceNew">
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:domain) %></dt>
+          <dd>
+            <%#= form.text_field   :domain , :class => 'style1' %>
+            <%= @user.domain %>          <%= @user.domain2 %>
+          </dd>
+        </dl>
+ 
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:name) %></dt>
+          <dd>
+            <%#= form.text_field   :name , :class => 'style1' %>
+             <%= @user.name %>
+          </dd>
+        </dl>
+
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:email) %></dt>
+          <dd>
+            <%= form.text_field   :email , :class => 'style1' %>
+          </dd>
+        </dl>
+
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:qq) %></dt>
+          <dd>
+            <%= form.text_field   :qq , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:tel) %></dt>
+          <dd>
+            <%= form.text_field   :tel , :class => 'style1' %>
+          </dd>
+        </dl>
+
+
+ 
+      </div>
+      <div class="PostBtn">
+        <p>
+          <%= form.submit t('labels.save')  , :class=>"btnW2_search" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+</div>
+</div>
+ 

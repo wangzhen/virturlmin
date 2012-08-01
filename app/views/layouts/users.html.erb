@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title><%= @title || "admin" %></title>
+    <%= stylesheet_link_tag 'admin'  %>
+
+    <!-- <%= stylesheet_link_tag 'member' %> -->
+  <%= csrf_meta_tags %>
+<%#= javascript_include_tag :fckeditor %>
+<%#= calendar_date_select_includes %>
+<%#= javascript_include_tag :defaults %>
+<%#= javascript_include_tag :ckeditor %>
+    <%= javascript_include_tag "/assets/ckeditor/ckeditor.js" %>
+<%#= javascript_include_tag "/javascripts/ckeditor/config.js" %>
+<%#= javascript_include_tag "/javascripts/ckeditor/ckeditor_basic.js" %>
+<%#= stylesheet_link_tag '/javascripts/ckeditor/contents.css'  %>
+    <%= yield :head %>
+  </head>
+  <body>
+    <div class="Header">
+      <div class="LogoArea">
+        <p class="logo">
+        </p>
+        <span class="welcome">     <a href="/" target="_blank" class="copse">
+<img width="" height="30" class="yamaha" alt="" src="/images/admin/logo.gif">
+           </a>
+              <span style='color:red'><%= session[:user_name]%></span> 欢迎使用虚拟主机面板</span>
+      </div>
+      <ul class="Button">
+        <li><a href="/sessions/home" target="_blank">欢迎页面</a></li>
+        <li><%= link_to '退出登录', :controller=>'sessions', :action=>'logout' %></li>
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="Wrapper">
+
+      <%= render :partial => "/shared/submenu" %>
+        <span style='color:blue'><%= flash[:notice]%></span>
+      <%= yield  %>
+
+      <div class="clear"></div>
+    </div>
+    <div class="Footer">
+  <p class="link_f">
+    <a href="/sessions/yinsi.html" target="_blank">使用条款</a>｜<a href="#" target="_blank">隐私保护</a>｜<a href="#" target="_blank">运营公司</a>
+
+    <span style='color:red'>电话: 15288319095 QQ: 601259096  Email: vwangzhen@126.com</span>
+
+
+  </p>
+
+  <p class="logo_f"><a href="/"><img width="" height="30" class="yamaha" alt="" src="/images/admin/logo.jpg"></a></p>
+</div>
+  </body>
+</html>

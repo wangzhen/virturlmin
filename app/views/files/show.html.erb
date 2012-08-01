@@ -1,0 +1,74 @@
+
+<div class="BodyContents">
+  <div class="TitleArea">
+    <h2>文件管理</h2>
+
+  </div>
+
+
+  <!--LIST-->
+  <div class="ListContents">
+    <table cellspacing="0" cellpadding="0" border="0" class="widefat">
+      <tbody>
+
+      <tr>
+        <th class="lineB " scope="col">
+           文件名
+        </th>
+        <th class="lineB " scope="col">
+  文件类型
+        </th>
+  
+        <th class="lineB operation-column" scope="col">操作</th>
+      </tr>
+ 
+
+
+ <%     @files.each  do |file| %>
+
+          <% if File.directory?(@path) %>
+                    <%- cycle_class = cycle('Blue', '') %>
+          <tr>
+            <td class="<%= cycle_class %>"><%= file%></td>
+            <td class="<%= cycle_class %>">文件夹</td>
+             <td class="<%= cycle_class %>"><%=  link_to 'dakai' , "#{files_path}#{params[:file]}/#{file}"%></td>
+            <td class="<%= cycle_class %>">
+
+              <br/>
+            </td>
+          </tr>
+          <%end%>
+
+<%end%>
+ <%     @files.each  do |file| %>
+
+          <% unless File.directory?(@path) %>
+                    <%- cycle_class = cycle('Blue', '') %>
+          <tr>
+            <td class="<%= cycle_class %>"><%= file%></td>
+            <td class="<%= cycle_class %>">文件</td>
+            <td class="<%= cycle_class %>">
+
+              <br/>
+            </td>
+          </tr>
+          <%end%>
+
+<%end%>
+      <tr>
+        <th class="lineB " scope="col">
+           文件名
+        </th>
+        <th class="lineB " scope="col">
+  文件类型
+        </th>
+  
+        <th class="lineB operation-column" scope="col">操作</th>
+      </tbody>
+    </table>
+
+
+  </div>
+
+</div>
+

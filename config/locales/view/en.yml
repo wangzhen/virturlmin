@@ -1,0 +1,92 @@
+en:
+  users:
+    new:
+      title: Sign Up
+      subtitle: "&nbsp;"
+    form:
+      note: "A red part is a required item. "
+    create:
+      need_activate: "We have send a email to you.please check it and follow the intruction to finish your signup"
+    update:
+      password_attention: "It is not updated in case of emptily. "
+    activate:
+      after_activate: "The member registration was normally completed. Please log in and continue shopping."
+    edit:
+      subtitle: ""
+  sessions:
+    new:
+      forgot_password: "Forgot password？"
+      remember_me: "Remember me"
+      subtitle: "&nbsp;"
+      member: "Member"
+      join_now: "Join Now"
+      join_text: "Please register before shopping"
+  pages:
+    information:
+      subtitle: "Guides"
+  forgotten_passwords:
+    flash:
+      delivered: "We've sent you a mail to {{email}}, check it out please."
+      email_not_exists: "Can not find this email address."
+      expired: "This URL has been expired."
+      completed: "Your password has been reset. Please login by the new password."
+      wrong_reset_code: There was a problem resetting your password. Please try again."
+    new:
+      message: "Please enter your email address and we'll send you a mail to reset your password."
+
+  orders:
+    new:
+      subtitle: "order page"
+  mail_common:
+    after_name: "excellency,"
+    label_company_name: "Company"
+    company_name: "Cerahbulle Trading Co., Ltd.Shanghai"
+    label_address: "Address"
+    address: "Wuyi Road, Changning District, Shanghai 208 Room 351"
+    name1: "荒谷哲巨 / 金凱"
+    name2: "(Tetsuhiro Aratani / Jin Kai)"
+    label_phone: "Tel"
+    label_fax: "Fax"
+  signup:
+    subject: "User Registration"
+    msg1: "thanks for your registration"
+    msg2: "to finsish the comfirmation of email,please click link below "
+    msg3: "In order to facilitate the purchase, please login firstly"
+  activation:
+    subject: "the message of successful login"
+    msg1: "thank you very much to become the user of cherahbulle WEB"
+    msg2: "please explore the site below to go on your shopping"
+    msg3: "if possible,welcome to browse our site and enjoy our special service "
+  user_update:
+    subject: "information of amending information"
+    msg1: "your personl information have updated sucessully"
+    msg2: "please click the link below to enter our site"
+    msg3: "if possible,welcome to browse our site and enjor our special service"
+  forgot_password:
+    subject: "retrieve the password"
+    msg1: "please click the link below to retrieve your password"
+    msg2: "if possible,welcome to browse our site and enjoy our special service"
+  reset_password:
+    subject: "notice of changing password"
+    msg1: "have updated password successfully."
+    msg2: "if possible,welcome to browse our site and enjoy our special service"
+  order_ok:
+    subject: "thanks for your order"
+    msg1: "thank you very much for your shopping at Cerahbulle shop."
+    msg2: "order number"
+    msg3: "."
+    msg4: "the detail of order"
+    msg5: "Date of Order"
+    product_name: "commodity name"
+    price: "unit price"
+    unit: "amount"
+    tax: "subtotal"
+    amount: "total"
+    msg5: "mailing information"
+    address: "residence"
+    name: "name"
+    tel: "telephone number"
+    send_date: "expected arrival date"
+    send_time: "expected arrival time"
+    msg6: "please save the content of this email.if there is something uncertain,tell our staff the serial number of the order"
+    msg7: "thank you"

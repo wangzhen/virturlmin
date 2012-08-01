@@ -1,0 +1,128 @@
+
+
+<style>
+.ListContents td.Blue {
+background: #F1F1F1;
+padding: 3px;
+text-align: left;
+}
+.ListContents td{
+  padding: 3px;
+}
+</style>
+<div class="BodyContents">
+  <div class="TitleArea">
+    <h2>文件管理</h2>
+
+  </div>
+
+
+<%=  link_to '根目录' , "#{files_path}/master"%>
+
+
+<%=  link_to '上一级' , "#{files_path}/master#{show_directory(params[:file])}/.."%>
+
+    <div class="SearchArea2">
+      <p class="title">
+<%= form_tag  files_path , :multipart => true ,:id => 'form' do   %>
+
+<%= file_field_tag :filedata%>
+<%= text_field_tag :file,params[:file], :class => "typeA" ,:style=>'width:300px' %>
+
+     
+          <%=  submit_tag '上传'  , :class=>"BottomW2" %>
+
+<% end %>
+      </p>
+    </div>
+
+
+
+  <!--LIST-->
+  <div class="ListContents">
+   
+   <% if File.directory?(@path)  %>
+
+
+    <table cellspacing="0" cellpadding="0" border="0" class="widefat">
+      <tbody>
+
+      <tr>
+        <th class="lineB " scope="col">
+           文件名
+        </th>
+        <th class="lineB " scope="col">
+  文件类型
+        </th>
+          <th class="lineB operation-column" scope="col">操作</th>
+        <th class="lineB operation-column" scope="col">打包</th>
+      </tr>
+ 
+
+
+ <%     @files.each  do |file| %>
+          <%unless   ['.','..'].include?(file)%>
+          <% if File.directory?("#{@path}/#{file}") %>
+          <%- cycle_class = cycle('Blue', '') %>
+          <tr>
+            <td class="<%= cycle_class %>"><%= file%></td>
+            <td class="<%= cycle_class %>">文件夹</td>
+             <td class="<%= cycle_class %>"><%=  link_to '打开' , "#{files_path}/master#{show_directory(params[:file])}/#{file}"%></td>
+             <td class="<%= cycle_class %>"><%=  link_to '打包' , "#{zip_files_path}#{show_directory(params[:file])}/#{file}"%></td>
+          </tr>
+          <%end%>
+          <%end%>
+
+<%end%>
+ <%     @files.each  do |file| %>
+
+          <% unless File.directory?("#{@path}/#{file}") %>
+                    <%- cycle_class = cycle('Blue', '') %>
+          <tr>
+            <td class="<%= cycle_class %>"><%= file%></td>
+            <td class="<%= cycle_class %>">文件</td>
+            <td class="<%= cycle_class %>"><%=  link_to '下载' , "#{files_path}/master#{show_directory(params[:file])}/#{file}"%></td>
+          <td class="<%= cycle_class %>">
+<% if file.include?(".zip") || file.include?(".tar")%>
+<%=  link_to '解压' , "#{unzip_files_path}#{show_directory(params[:file])}/#{file}?f=#{params[:file]}"%>
+<%end%>
+
+          </td>
+          </tr>
+          <%end%>
+
+<%end%>
+      <tr>
+        <th class="lineB " scope="col">
+           文件名
+        </th>
+        <th class="lineB " scope="col">
+  文件类型
+        </th>
+          <th class="lineB operation-column" scope="col">操作</th>
+        <th class="lineB operation-column" scope="col">打包</th>
+      </tr>
+ 
+      </tbody>
+    </table>
+
+   <%else%>
+<%
+require 'iconv'
+
+ic = Iconv.new('GBK//IGNORE', 'UTF-8')
+
+%>
+
+<% File.open(@path , "r") do |f|%>
+<code><pre>
+<%#= raw  Iconv.iconv( 'utf-8',  'gbk', f.read)  %>
+<%= text_area_tag 'post' ,Iconv.iconv( 'utf-8',  'gbk', CGI::escape(f.read)), :rows => 110, :cols => 125 %>
+
+</pre></code>
+<%end%>
+<%end%>
+  </div>
+
+</div>
+

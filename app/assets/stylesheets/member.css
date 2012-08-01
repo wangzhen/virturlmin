@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||               Your styles !                  ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+
+@font-face {
+    font-family: 'CopseRegular';
+    src: url('/fonts/Copse-Regular-webfont.eot');
+    src: url('/fonts/Copse-Regular-webfont.eot?iefix') format('eot'),
+         url('/fonts/Copse-Regular-webfont.woff') format('woff'),
+         url('/fonts/Copse-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/Copse-Regular-webfont.svg#webfont2ZLDIqTa') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.copse{
+font-family: CopseRegular, Arial, Helvetica, sans-serif;
+font-size: 30px;
+font-style: normal;
+font-variant: normal;
+border-left-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+color: #78AD07;
+display: block;
+font-size: 40px;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+height: 90px;
+line-height: 90px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+text-shadow: #EEE 5px 3px 1px;
+vertical-align: baseline;
+}

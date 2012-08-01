@@ -1,0 +1,44 @@
+ 
+<div class="BodyContents">
+  <div class="TitleArea">
+    <h2>用户信息</h2>
+
+    <p class="btnW5"><%= link_to  '修改', edit_user_path(@user)  %></p>
+  </div>
+ 
+ 
+<div class="SumArea">
+    <dl>
+      <dt><%= User.human_attribute_name(:domain) %></dt>
+      <dd> <%= @user.domain %>          <%= @user.domain2 %></dd>
+    </dl>
+
+
+        <dl>
+          <dt><%= User.human_attribute_name(:name) %></dt>
+          <dd><%= @user.name%></dd>
+        </dl>
+
+        <dl>
+          <dt><%= User.human_attribute_name(:qq) %></dt>
+          <dd><%= @user.qq%></dd>
+        </dl>
+
+        <dl>
+          <dt><%= User.human_attribute_name(:email) %></dt>
+          <dd><%= @user.email%></dd>
+        </dl>
+
+            <dl>
+          <dt><%= User.human_attribute_name(:tel) %></dt>
+          <dd><%= @user.tel%></dd>
+        </dl>
+
+ 
+
+
+  </div>
+  </div>
+
+</div>
+ 

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title><%= @title || "admin" %></title>
+            <%#= javascript_include_tag 'jquery' %>
+            <%#= javascript_include_tag 'jrails' %>
+    <%#= javascript_include_tag 'jquery-ui' %>
+      <%= stylesheet_link_tag 'admin' %>
+    <%= javascript_include_tag 'prototype' %>
+
+
+    <%= yield :head %>
+  </head>
+  <body>
+    <div class="Header">
+      <div class="LogoArea">
+        <!--
+        <p class="logo">
+          <a href="/" target="_blank"><img src="/images/admin/Logo_B.jpg" alt="logo" class="MailBulk" style="padding-top: 20px"/></a>
+        </p>
+        -->
+ 
+        <span class="welcome" style='font-size: 16px;'>欢迎使用虚拟主机面板!</span>
+      </div>
+      <ul class="Button">
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="Wrapper">
+
+      <%#= render :partial => "/admin/shared/submenu" %>
+
+      <%= yield %>
+
+      <div class="clear"></div>
+    </div>
+    <div class="Footer">
+  <p class="link_f">
+    <a href="/yinsi.html" target="_blank">使用条款</a>｜<a href="#" target="_blank">隐私保护</a>｜<a href="http://kembo-net.com/" target="_blank">运营公司</a></p>
+
+  <p class="logo_f"><a href="#"><img width="206" height="30" class="yamaha" alt="" src="/images/powered.png"></a></p>
+</div>
+  </body>
+</html>

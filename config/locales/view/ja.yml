@@ -1,0 +1,49 @@
+ja:
+  hotel:
+    index:
+      id: "ID"
+      name: "名前"
+      area_id: 地域
+      summery: 短い説明
+      content: "説明"
+      map_no: "地図番号 "
+      postcode: "郵便番号"
+      pref: "都道府県"
+      city: "市"
+      district: "区"
+      address: "住所"
+      access: アクセス
+      checkin: チェックイン
+      checkout: チェックアウト
+      moning_start_time: "朝食開始時間"
+      moning_end_time: "朝食終了時間"
+      dinner_start_time: "夕食開始時間"
+      dinner_end_time: "夕食終了時間"
+      bath_summary: "風呂"
+      food_summary: "食事"
+      other_summary: "その他"
+      transport_fee: "交通費"
+      lat: "緯度"
+      lng: "経度"
+      short_summary: "短い説明"
+      updated_at: "更新時間"
+      created_at: "作成時間"
+
+  area:
+    index:
+      name: "地域名"
+      content: "説明"
+      hotel_amount: 宿泊施設数
+      created_at: 作成時間
+
+
+
+
+
+
+
+
+
+
+
+
