@@ -11,16 +11,16 @@ class FilesController < ApplicationController
     if params[:file]
       @file =  params[:file] 
       p @file
-      @path = "/home/wangzhen/#{@file}"
+      @path = "/home/session[:user_name]/#{@file}"
       @path.to_s.gsub!('\.\.' , '')
       if File.directory?(@path)
-       @files =  Dir.foreach("/home/wangzhen/#{@file}") 
+       @files =  Dir.foreach("/home/session[:user_name]/#{@file}") 
       else
        send_file         @path
       end
     else
-      @path = "/home/wangzhen"
-      @files =  Dir.foreach("/home/wangzhen")
+      @path = "/home/session[:user_name]"
+      @files =  Dir.foreach("/home/session[:user_name]")
     
     end
 
@@ -33,13 +33,13 @@ def zip
 
     if params[:file]
       @file =  params[:file] 
-      @path = "/home/wangzhen/#{@file}"
+      @path = "/home/session[:user_name]/#{@file}"
     else
-      @path = "/home/wangzhen"
+      @path = "/home/session[:user_name]"
     end
      @path.to_s.gsub!('\.\.' , '')
      p system(" tar czf #{@path}.tar.gz  #{@path}  ")
-     # p system(" chown -R wangzhen:wangzhen   /home/wangzhen/")
+     # p system(" chown -R session[:user_name]:session[:user_name]   /home/session[:user_name]/")
      redirect_to "#{files_path}/master/#{@file}/.."
 end
 
@@ -49,15 +49,15 @@ def unzip
 
     if params[:file]
       @file =  params[:file] 
-      @path = "/home/wangzhen/#{@file}"
+      @path = "/home/session[:user_name]/#{@file}"
     else
-      @path = "/home/wangzhen"
+      @path = "/home/session[:user_name]"
     end
     if params[:f]
       @d =  params[:f] 
-      @directory = "/home/wangzhen/#{@d}"
+      @directory = "/home/session[:user_name]/#{@d}"
     else
-      @directory = "/home/wangzhen"
+      @directory = "/home/session[:user_name]"
     end
 
 
@@ -70,7 +70,7 @@ def unzip
     if @path.include?(".zip")
      p system(" unzip #{@path}  -d  #{@directory}  ")
      end
-     # p system(" chown -R wangzhen:wangzhen   /home/wangzhen/")
+     # p system(" chown -R session[:user_name]:session[:user_name]   /home/session[:user_name]/")
      redirect_to "#{files_path}/master/#{@file}/.."
   
 end
@@ -78,7 +78,7 @@ end
 
 def create
 
-        @path = "/home/wangzhen/#{params[:file]}"
+        @path = "/home/session[:user_name]/#{params[:file]}"
         @path.to_s.gsub!('\.\.' , '')
         @path.to_s.gsub!(/\/\// , '/')
       # ic = Iconv.new('GBK//IGNORE', 'UTF-8')
@@ -101,8 +101,8 @@ end
   def show
  
 
-      @path = "/home/wangzhen/#{params[:file]}"
-      @files =  Dir.foreach("/home/wangzhen/#{params[:file]}") 
+      @path = "/home/session[:user_name]/#{params[:file]}"
+      @files =  Dir.foreach("/home/session[:user_name]/#{params[:file]}") 
 
         render :index
    

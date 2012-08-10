@@ -62,7 +62,6 @@ EOF")
 # create mysql
 p system(
 " mysql -uroot -p123456 -e\"
-create dabatase
 CREATE USER '#{@user.name}'@'%' IDENTIFIED BY  '#{@user.password}';
 GRANT USAGE ON * . * TO  '#{@user.name}'@'%' IDENTIFIED BY  '#{@user.name}' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
 CREATE DATABASE IF NOT EXISTS  #{@user.name} ;
