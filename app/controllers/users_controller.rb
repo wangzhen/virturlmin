@@ -71,7 +71,7 @@ GRANT ALL PRIVILEGES ON  #{@user.name}.* TO  '#{@user.name}'@'%'  IDENTIFIED BY 
 ")
 
 # # create nginx
-File.open("/home/wangzhen/#{@user.name}.conf", "w") do |file|
+File.open("/opt/nginx/conf/website/#{@user.name}.conf", "w") do |file|
 file.write(
    " server {
         listen       80;
@@ -163,7 +163,7 @@ EOF")
 params[:user].delete('name')
 # params[:domain].delete('domain')
 
-File.open("/home/wangzhen/#{@user.name}.conf", "w") do |file|
+File.open("/opt/nginx/conf/website/#{@user.name}.conf", "w") do |file|
 file.write(
    " server {
         listen       80;
